@@ -1,0 +1,36 @@
+body {
+  background-color: #f5f5f5;
+  color: #40407a;
+  font-family: Verdana, Arial, sans-serif; /* Added line for font typeface */
+}
+
+header {
+  background-color: #80cbc4;
+  background-image: url('lilyheader.jpg'); /* Added line for background image */
+  background-position: right; /* Ensures the image is positioned to the right */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+nav {
+  text-align: center; /* Centers the text */
+  font-weight: bold; /* Makes text bold */
+}
+
+nav a {
+  text-decoration: none; /* Removes underline from hyperlinks */
+}
+
+h1 {
+  line-height: 400%; /* Sets line height to 400% */
+  text-indent: 1em; /* Indents text by 1em */
+}
+
+footer {
+  font-size: small; /* Sets font size to small */
+  font-style: italic; /* Italicizes text */
+  text-align: center; /* Centers text */
+}
+
+li, dd {
+  font-size: 90%; /* Sets font size to 90% for list and description list elements */
+}
