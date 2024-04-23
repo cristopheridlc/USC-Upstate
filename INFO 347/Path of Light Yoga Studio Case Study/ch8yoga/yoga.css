@@ -7,45 +7,58 @@ body {
   background-color: #f5f5f5;
   color: #40407a;
   font-family: Verdana, Arial, sans-serif;
-  /* Added line for font typeface */
+  max-width: none;
+  min-width: none;
 }
 
 header {
   background-color: #80cbc4;
   background-image: url('lilyheader.jpg');
-  /* Added line for background image */
   background-position: right;
-  /* Ensures the image is positioned to the right */
   background-repeat: no-repeat;
-  /* Prevents the image from repeating */
   margin-top: 50px;
+  font-size: 90%;
+  min-height: 200px;
 }
 
 .onethird {
   float: left;
   width: 33%;
   padding: 2em;
+  display: block;
 }
 
 .onehalf {
   float: left;
   width: 50%;
   padding: 2em;
+  display: none;
 }
 
 .home {
-  height: 50vh;
+  height: 20vh;
+  padding-top: 2em;
+  padding-left: 10%;
+  font-size: auto;
+  min-height: none;
 }
 
 .content {
-  height: 250px;
+  padding-bottom: none;
+  padding-left: 10%;
+  height: 20vh;
 }
 
 #mathero,
 #loungehero {
   clear: both;
+  display: none;
+  clear: none;
 }
 
+#flow {
+  display: block;
+}
 
 header a:link,
 header a:visited {
@@ -66,33 +79,34 @@ nav {
   left: 0;
   z-index: 9999;
   width: 100%;
-  height: 50px;
+  height: auto;
+  padding-right: 0;
+}
+
+#wrapper {
+  margin: 0;
+  width: auto;
 }
 
 nav a {
   text-decoration: none;
-  /* Removes underline from hyperlinks */
 }
 
 h1 {
   line-height: 400%;
-  /* Sets line height to 400% */
   text-indent: 1em;
-  /* Indents text by 1em */
 }
 
 footer {
   font-size: small;
   font-style: italic;
   text-align: center;
-  /* Centers text */
   clear: right;
 }
 
 li,
 dd {
   font-size: 90%;
-  /* Sets font size to 90% for list and description list elements */
 }
 
 
@@ -105,7 +119,7 @@ nav ul {
 
 nav li {
   display: inline;
-  padding-left: 2em;
+  padding-left: 4em;
 }
 
 nav a:link {
@@ -118,4 +132,52 @@ nav a:visited {
 
 nav a:hover {
   color: #A26100;
+}
+
+@media (min-width: 600px) {
+  nav ul {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+  }
+
+  section {
+    padding-left: 2em;
+    padding-right: 2em;
+    flex: 1;
+  }
+
+  #mathero, #loungehero {
+    display: block;
+    margin-bottom: 1em;
+  }
+
+  #flow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 1024px) {
+  header {
+      font-size: 120%;
+  }
+
+  .home {
+      height: 50vh;
+      padding-top: 5em;
+      padding-left: 8em;
+  }
+
+  .content {
+      height: 30vh;
+      padding-top: 2em;
+      padding-left: 8em;
+  }
+
+  #wrapper {
+      margin: auto;
+      width: 80%;
+  }
 }
